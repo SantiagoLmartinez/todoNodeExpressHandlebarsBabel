@@ -1,0 +1,29 @@
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>N°</th>
+            <th>title</th>
+            <th>description</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tasks }}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>
+                {{#if done}}
+                <a href="/toggleDone/{{_id}}" class="btn btn-primary mx-1">UnDone</a>
+                {{else}}
+                <a href="/toggleDone/{{_id}}" class="btn btn-secondary mx-1">Done</a>
+                {{/if}}
+
+                <a href="/edit/{{_id}}" class="btn btn-warning mx-1">Edit</a>
+                <a href="/delete/{{_id}}" class="btn btn-danger mx-1">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

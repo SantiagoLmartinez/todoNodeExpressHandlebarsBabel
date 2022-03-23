@@ -1,0 +1,13 @@
+<h1>Edit Task</h1>
+
+<form action="/edit/{{task._id}}" method="POST">
+    <div class="mb-2">
+        <input type="text" name="title" class="form-control" placeholder="title" value="{{task.title}}">
+    </div>
+    <div class="mb-2">
+    <textarea name="description" id="" rows="3" class="form-control" placeholder="add a description" >{{task.description}}</textarea>
+    </div>
+    <div>
+    <button class="btn btn-dark w-100">update</button>
+    </div>
+</form>
