@@ -10,17 +10,17 @@ router.get('/', renderTasks )
 router.post('/tasks/add', createTask)
 
 // ELIMINAR
-router.get('/delete/:id', deletetask)
+router.get('/tasks/:id/delete', deletetask)
 
 // router.get('/about', (req,res) =>{
 //     res.render('about')
 // })
 
 // EDITAR
-router.get('/edit/:id', updateGetTask)
-router.post('/edit/:id', updatePostTask)
+router.get('/tasks/:id/edit', updateGetTask)
+router.post('/tasks/:id/edit', updatePostTask)
 
 // toggle done
-router.get('/toggleDone/:id', toggleDoneTask)
+router.get('/tasks/:id/toggleDone', toggleDoneTask)
 
 export default router;
